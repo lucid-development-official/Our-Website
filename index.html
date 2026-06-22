@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucid Development</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Lucid Development</h1>
+    <p>Modern software, tools, and digital solutions.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Lucid Development creates clean, reliable software solutions including
+      bots, tools, templates, and web applications.  
+      Built with performance, simplicity, and scalability in mind.
+    </p>
+  </section>
+
+  <section id="products">
+    <h2>Products</h2>
+
+    <div class="card">
+      <h3>Discord Bot Templates</h3>
+      <p>Professional starter bots with moderation, XP systems, and clean structure.</p>
+    </div>
+
+    <div class="card">
+      <h3>Web Tools & Extensions</h3>
+      <p>Lightweight tools and browser extensions designed to solve real problems.</p>
+    </div>
+
+    <div class="card">
+      <h3>Custom Development</h3>
+      <p>Custom projects available on request.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="#" id="email-link" data-email="luciddevelopmentwork@gmail.com" role="button" aria-label="Copy email address">luciddevelopmentwork@gmail.com</a>
+      <span id="email-feedback" style="margin-left:8px;font-size:0.9em;color:green;display:none">Copied!</span><br />
+      GitHub: <a href="https://github.com/lucid-development-official" target="_blank" rel="noopener noreferrer">github.com/lucid-development-official</a>
+    </p>
+  </section>
+
+  <script>
+    (function(){
+      var link = document.getElementById('email-link');
+      var feedback = document.getElementById('email-feedback');
+      if(!link) return;
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        var email = this.dataset.email || '';
+        function show(){
+          feedback.style.display = 'inline';
+          setTimeout(function(){ feedback.style.display = 'none'; }, 1800);
+        }
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(email).then(show).catch(function(){
+            // fallback
+            var ta = document.createElement('textarea');
+            ta.value = email; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); show(); } catch(e){}
+            document.body.removeChild(ta);
+          });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = email; document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); show(); } catch(e){}
+          document.body.removeChild(ta);
+        }
+      });
+    })();
+  </script>
+
+  <footer>
+    <p>© 2026 Lucid Development. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
