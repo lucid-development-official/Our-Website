@@ -5,90 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lucid Development</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <header>
-    <h1>Lucid Development</h1>
-    <p>Modern software, tools, and digital solutions.</p>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">Lucid<span>Dev</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      Lucid Development creates clean, reliable software solutions including
-      bots, tools, templates, and web applications.  
-      Built with performance, simplicity, and scalability in mind.
-    </p>
-  </section>
-
-  <section id="products">
-    <h2>Products</h2>
-
-    <div class="card">
-      <h3>Discord Bot Templates</h3>
-      <p>Professional starter bots with moderation, XP systems, and clean structure.</p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Software &amp; Digital Solutions</p>
+      <h1>We build things<br>that actually work.</h1>
+      <p class="hero-sub">Modern bots, web tools, and custom software — built clean, shipped fast.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">See our work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
     </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+  </header>
 
-    <div class="card">
-      <h3>Web Tools & Extensions</h3>
-      <p>Lightweight tools and browser extensions designed to solve real problems.</p>
-    </div>
-
-    <div class="card">
-      <h3>Custom Development</h3>
-      <p>Custom projects available on request.</p>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <span class="section-label">About us</span>
+      <h2>Small team. Serious output.</h2>
+      <p class="section-body">
+        Lucid Development creates clean, reliable software solutions — bots, tools, templates, and web applications — built with performance, simplicity, and scalability in mind. We care about the details so you don't have to.
+      </p>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="#" id="email-link" data-email="luciddevelopmentwork@gmail.com" role="button" aria-label="Copy email address">luciddevelopmentwork@gmail.com</a>
-      <span id="email-feedback" style="margin-left:8px;font-size:0.9em;color:green;display:none">Copied!</span><br />
-      GitHub: <a href="https://github.com/lucid-development-official" target="_blank" rel="noopener noreferrer">github.com/lucid-development-official</a>
-    </p>
+  <!-- PRODUCTS -->
+  <section id="products" class="section section-alt">
+    <div class="section-inner">
+      <span class="section-label">What we make</span>
+      <h2>Products</h2>
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Discord Bot Templates</h3>
+          <p>Professional starter bots with moderation, XP systems, and clean structure — ready to deploy and easy to extend.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Web Tools &amp; Extensions</h3>
+          <p>Lightweight browser extensions and utilities designed to solve real problems without getting in your way.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Custom Development</h3>
+          <p>Have something specific in mind? We take on custom projects. Reach out and let's talk scope.</p>
+        </div>
+
+      </div>
+    </div>
   </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-inner contact-inner">
+      <span class="section-label">Say hello</span>
+      <h2>Contact</h2>
+      <p class="section-body">Have a project in mind or just want to chat? Drop us a line.</p>
+
+      <div class="contact-links">
+        <a href="#" id="email-link" class="contact-item" data-email="luciddevelopmentwork@gmail.com" role="button" aria-label="Copy email address">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          <span>luciddevelopmentwork@gmail.com</span>
+          <span id="email-feedback" class="copy-badge" aria-live="polite">Copied!</span>
+        </a>
+
+        <a href="https://github.com/lucid-development-official" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span>github.com/lucid-development-official</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Lucid Development. All rights reserved.</p>
+  </footer>
 
   <script>
-    (function(){
+    (function () {
       var link = document.getElementById('email-link');
       var feedback = document.getElementById('email-feedback');
-      if(!link) return;
-      link.addEventListener('click', function(e){
+      if (!link) return;
+      link.addEventListener('click', function (e) {
         e.preventDefault();
         var email = this.dataset.email || '';
-        function show(){
-          feedback.style.display = 'inline';
-          setTimeout(function(){ feedback.style.display = 'none'; }, 1800);
+        function show() {
+          feedback.classList.add('visible');
+          setTimeout(function () { feedback.classList.remove('visible'); }, 1800);
         }
-        if(navigator.clipboard && navigator.clipboard.writeText){
-          navigator.clipboard.writeText(email).then(show).catch(function(){
-            // fallback
-            var ta = document.createElement('textarea');
-            ta.value = email; document.body.appendChild(ta); ta.select();
-            try { document.execCommand('copy'); show(); } catch(e){}
-            document.body.removeChild(ta);
-          });
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(show).catch(fallback);
         } else {
+          fallback();
+        }
+        function fallback() {
           var ta = document.createElement('textarea');
-          ta.value = email; document.body.appendChild(ta); ta.select();
-          try { document.execCommand('copy'); show(); } catch(e){}
+          ta.value = email;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); show(); } catch (err) { }
           document.body.removeChild(ta);
         }
       });
     })();
   </script>
-
-  <footer>
-    <p>© 2026 Lucid Development. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
